@@ -4,8 +4,9 @@
 
 <!-- get and list names of all teachers -->
 <% @teachers.each do |teacher| %>
+<p>Oldest student: <%= teacher.oldest_student %> | Youngest student: <%= teacher.youngest_student %>
+
   <h3><%= "#{teacher.first_name} #{teacher.last_name}" %></h3>
-  <% if !teacher.students.empty?  %>
     <% teacher.students.each do |student| %>
       <p>
         <ul>
