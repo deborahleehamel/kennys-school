@@ -1,1 +1,19 @@
 <h1>Welcome to Kenny's School</h1>
+
+<h3>Teachers</h3>
+
+<!-- get and list names of all teachers -->
+<% @teachers.each do |teacher| %>
+  <h3><%= "#{teacher.first_name} #{teacher.last_name}" %></h3>
+  <% if !teacher.students.empty?  %>
+    <% teacher.students.each do |student| %>
+      <p>
+        <ul>
+          <li>
+        <%= "#{student.first_name} #{student.last_name}" %>
+        </li>
+      </ul>
+      </p>
+    <% end %>
+  <% end %>
+<% end %>
