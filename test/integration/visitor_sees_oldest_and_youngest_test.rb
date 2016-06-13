@@ -23,6 +23,7 @@ require 'test_helper'
       #teacher's oldest and youngest student age shows on page
       assert page.has_content? "Oldest student: 30"
       assert page.has_content? "Youngest student: 19"
+      rassert page.has_no_content? "25"
     end
 
 end

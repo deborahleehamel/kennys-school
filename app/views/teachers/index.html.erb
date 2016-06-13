@@ -2,11 +2,12 @@
 
 <h3>Teachers</h3>
 
-<!-- get and list names of all teachers -->
+<!-- list names of all teachers -->
 <% @teachers.each do |teacher| %>
-<p>Oldest student: <%= teacher.oldest_student %> | Youngest student: <%= teacher.youngest_student %>
-
   <h3><%= "#{teacher.first_name} #{teacher.last_name}" %></h3>
+  <!-- select maximum and minimum age for each teachers students -->
+  <p>Oldest student: <%= teacher.oldest_student %> | Youngest student: <%= teacher.youngest_student %>
+<!-- list all teachers students -->
     <% teacher.students.each do |student| %>
       <p>
         <ul>
@@ -15,6 +16,5 @@
         </li>
       </ul>
       </p>
-    <% end %>
   <% end %>
 <% end %>
